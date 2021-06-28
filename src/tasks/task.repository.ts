@@ -27,6 +27,10 @@ export class TaskRepository extends Repository<Task> {
     return tasks;
   }
 
+  async getAllTasks(): Promise<Task[]> {
+    return this.find();
+  }
+
   async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
     const { title, description } = createTaskDto;
 

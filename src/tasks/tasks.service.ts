@@ -18,6 +18,10 @@ export class TasksService {
     return this.taskRepository.getTasks(filterDto);
   }
 
+  async getAllTasks(): Promise<Task[]> {
+    return this.taskRepository.getAllTasks();
+  }
+
   async getTaskById(id: number): Promise<Task> {
     return this.taskRepository.getTaskById(id);
   }
